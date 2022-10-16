@@ -1,0 +1,29 @@
+nohup: ignoring input
+/home/hantai/anaconda3/envs/py36/lib/python3.6/site-packages/sklearn/externals/joblib/__init__.py:15: FutureWarning: sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. Please import this functionality directly from joblib, which can be installed with: pip install joblib. If this warning is raised when loading pickled models, you may need to re-serialize those models with scikit-learn 0.21+.
+  warnings.warn(msg, category=FutureWarning)
+./test_glass5/standlization_data/glass5_std_train_1.csv
+./test_glass5/standlization_data/glass5_std_test_1.csv
+MLP_im2_2000
+both_num_10_half
+./test_glass5/model_MLP_im2_2000/record_1/MLP_im2_2000_1
+./test_glass5/result_MLP_im2_2000_both_num_10_half/record_1/
+----------------------
+
+
+
+Traceback (most recent call last):
+  File "./classifier_MLP/test.py", line 249, in <module>
+    test_result = get_MLP_predict_result(cur_test_data, net)
+  File "./classifier_MLP/test.py", line 245, in get_MLP_predict_result
+    output = net(test_input_data)
+  File "/home/hantai/anaconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "./classifier_MLP/test.py", line 229, in forward
+    x = self.hidden_1(x)
+  File "/home/hantai/anaconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/hantai/anaconda3/envs/py36/lib/python3.6/site-packages/torch/nn/modules/linear.py", line 94, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/hantai/anaconda3/envs/py36/lib/python3.6/site-packages/torch/nn/functional.py", line 1753, in linear
+    return torch._C._nn.linear(input, weight, bias)
+RuntimeError: mat1 dim 1 must match mat2 dim 0
